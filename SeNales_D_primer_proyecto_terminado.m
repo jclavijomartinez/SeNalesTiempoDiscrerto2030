@@ -10,6 +10,7 @@
 
 %Desarrollado por: Fabio Sánchez, Santiago Mesa y Juan Clavijo
 %Proyecto 1 - Señales de Tiempo Discreto
+%puede encontrar este y los demás proyectos en: https://github.com/jclavijomartinez/SeNalesTiempoDiscrerto2030
  
 while 1%pone en repetición todo el codigo para poder usarlo cuantas veces se desee
  pause()%con esto se pausa la ejecución del progama y cuando presiones una tecla el programa continua
