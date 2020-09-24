@@ -18,10 +18,12 @@ disp('Desarrollado por: Fabio Sánchez, Santiago Mesa y Juan Clavijo')% imprime 
 [sneaky fsj] = audioread('sneaky.wav');% almacena el sonido 1 en la var. sneaky
 [evil fsg] = audioread('evil.wav');% almacena el sonido 2 en la var. evil
 [right fsk] = audioread('right.wav');% almacena el sonido 3 en la var. right
+%pause
 %% Actividad 1 p.5
 disp(fsj)
 disp(fsg)
 disp(fsk)
+pause
 %% Actividad 1 p.6
 disp(['el tamaño de evil es: ',num2str(size(evil))])
 disp(['el tamaño de evil es: ',num2str(size(right))])
@@ -33,6 +35,11 @@ durevil=fsj*120123
 %% Actividad 1 p.8
 
 %% Actividad 1 p.9
-
+juantest=zeros(size(sneaky));
+juantest1=zeros(size(sneaky));
+juantest(:,2)=sneaky(:,2);
+juantest1(:,1)=sneaky(:,1);
+nuevo=[sneaky;juantest;juantest1];
+soundsc(nuevo,fsj);
 
 
