@@ -95,9 +95,23 @@ soundsc(C,fsj)
 audiowrite('W.wav',W,fsj);
 audiowrite('C.wav',C,fsj);
 %% Actividad4 p.25
+[impulso fimp] = audioread('SLIT_MDA_E001_M2S.wav');
 %% Actividad4 p.26
-%% Actividad4 p.27
+[m n]=size(impulso);
+disp(['el tamaño del audio es: ',num2str(m)])
 %% Actividad4 p.28
+CO=conv(sneaky(:,1),impulso(:,1))
 %% Actividad4 p.29
+[tam tama]=size(CO);
+[sne senak]=size(sneaky);
+[m n]=size(impulso);
+disp(['el tamaño de la convolucion es: ',num2str(tam)])
+disp(['es la suma de: ',num2str(sne),' + ',num2str(m), ' = ',num2str(sne+m)])
 %% Actividad4 p.30
+soundsc(sneaky,fsj)
+pause
+soundsc(CO,fimp)
 %% Actividad4 p.31
+%la diferencia es que al escuchar la salida, esta tiene el efecto de
+%reverberacion, este se produce por la convolucion de la señal con el
+%impulso
