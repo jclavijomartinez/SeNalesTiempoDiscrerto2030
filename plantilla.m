@@ -33,11 +33,17 @@ disp(['el tamaño de sneaky es: ',num2str(size(sneaky))])
 pause
 %% Actividad 1 p.7
 clc
-%la 
-durevil=fsj*120123
-%dursneaky=fsj*
+[m,n]=size(sneaky);
+dursneaky=fsj/m;
+[u,r]=size(evil);
+durevil=fsj/u;
+[a,b]=size(right);
+dursright=fsj/a;
+disp(['la duracion de sneaky',num2str(dursneaky)])
+disp(['la duracion de evil',num2str(durevil)])
+disp(['la duracion de right',num2str(dursright)])
 %% Actividad 1 p.8
-clc
+
 %% Actividad 1 p.9
 clc
 juantest=zeros(size(sneaky));
@@ -61,4 +67,37 @@ soundsc(juantest1,fsj);
 %% Actividad 1 p.12
 t=[0:1/fsj:(size(sneaky(:,1))-1)/fsj];
 plot(t,sneaky)
-%% Actividad 2 p. 1
+%% Actividad 2 p.14
+soundsc(sneaky,fsg)
+%% Actividad2 p.15
+newfs=0.7*fsj;
+soundsc(sneaky,newfs)
+%% Actividad2 p.17
+audiowrite('newsneaky.wav',sneaky,0.7*fsj)
+audiowrite('newsneaky1.3.wav',sneaky,1.3*fsj)
+%% Actividad3 p.18
+mat=magic(3)
+%% Actividad3 p.20
+V=fliplr(mat)%reflexion espejo
+pause
+H=flipud(mat)%reflexion segun x
+%% Actividad3 p.21
+colceros=sneaky;
+colceros(:,1)=0
+%% Actividad3 p.22
+W=fliplr(colceros);
+C=flipud(colceros);
+%% Actividad3 p.23
+soundsc(W,fsj)
+pause
+soundsc(C,fsj)
+%% Actividad3 p.24
+audiowrite('W.wav',W,fsj);
+audiowrite('C.wav',C,fsj);
+%% Actividad4 p.25
+%% Actividad4 p.26
+%% Actividad4 p.27
+%% Actividad4 p.28
+%% Actividad4 p.29
+%% Actividad4 p.30
+%% Actividad4 p.31
