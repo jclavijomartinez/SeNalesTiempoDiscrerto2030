@@ -115,3 +115,27 @@ soundsc(CO,fimp)
 %la diferencia es que al escuchar la salida, esta tiene el efecto de
 %reverberacion, este se produce por la convolucion de la señal con el
 %impulso
+%% Actividad 5 p.32
+[audioaleer fsg] = audioread('evil.wav');
+audioleido=audioaleer(:,1);
+N=length(audioleido);
+%% Actividad 5 p.33
+audioleido=audioaleer(:,2);
+%% Actividad 5 p.34
+RetardoL=zeros(N+30,2);
+%% Actividad 5 p.35
+RetardoL(1:N,1)=audioleido(:,1)
+%% Actividad 5 p.36
+RetardoL(31:N+30,2)=audioleido(:,1)
+%% Actividad 5 p.37
+subplot(211), plot(RetardoL(:,1))
+subplot(212), plot(RetardoL(:,2),'r')
+%% Actividad 5 p.38
+RetardoR=zeros(N+30,2);
+%% Actividad 5 p.39
+RetardoR(1:N,2)=audioleido(:,1)
+%% Actividad 5 p.40
+RetardoR(31:N+30,1)=audioleido(:,1)
+%% Actividad 5 p.44
+
+retardo_total=[RetardoL;audioleido;RetardoR]
