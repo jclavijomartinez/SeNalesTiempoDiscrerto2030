@@ -171,3 +171,7 @@ soundsc(RetardoR,fs1)
 audiowrite('posicion5.wav',RetardoR,fs1);
 %% 4. Respuesta impulso de un slit
 %% 5. Obtener la respuesta impulso de un SLIT
+
+%{
+Fabio es genial
+%}
