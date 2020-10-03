@@ -170,4 +170,5 @@ pause
 soundsc(RetardoR,fs1)
 audiowrite('posicion5.wav',RetardoR,fs1);
 %% 4. Respuesta impulso de un slit
+disp('se procede a crear el script')
 %% 5. Obtener la respuesta impulso de un SLIT
