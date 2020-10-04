@@ -170,5 +170,39 @@ pause
 soundsc(RetardoR,fs1)
 audiowrite('posicion5.wav',RetardoR,fs1);
 %% 4. Respuesta impulso de un slit
-
+[fraseslitFSJ fs1]= audioread('Audios/fraseslitFSJ.wav');
+[impulso1 fs1]=audioread('Audios/SLITS/IMPULSO1.wav');
+[impulso2 fs1]=audioread('Audios/SLITS/IMPULSO2.wav');
+[impulso3 fs1]=audioread('Audios/SLITS/IMPULSO3.wav');
+disp('Estas son las posibles opciones: ')
+disp('1. frase antes de pasar por los SLIT')
+disp('2. frase después de la convolucion con el SLIT 1')
+disp('3. frase después de la convolucion con el SLIT 2')
+disp('4. frase después de la convolucion con el SLIT 3')
+userinputp = input('opcion: ');
+switch userinputp
+    case 1
+        disp('pulse cualquier tecla para escuchar el audio:')
+        pause
+        soundsc(fraseslitFSJ,fs1)
+        disp('este audio ya esta guardado en su pc')
+    case 2
+        ConvSLIT1=conv(impulso1(:,1),fraseslitFSJ(:,1));
+        disp('pulse cualquier tecla para escuchar el audio:')
+        pause
+        soundsc(ConvSLIT1,fs1)
+        audiowrite('Audios/convolucion1.wav',ConvSLIT1,fs1);
+    case 3
+        ConvSLIT2=conv(impulso2(:,1),fraseslitFSJ(:,1));
+        disp('pulse cualquier tecla para escuchar el audio:')
+        pause
+        soundsc(ConvSLIT2,fs1)
+        audiowrite('Audios/convolucion2.wav',ConvSLIT2,fs1);
+    case 4
+        ConvSLIT3=conv(impulso3(:,1),fraseslitFSJ(:,1));
+        disp('pulse cualquier tecla para escuchar el audio:')
+        pause
+        soundsc(ConvSLIT3,fs1)
+        audiowrite('Audios/convolucion3.wav',ConvSLIT3,fs1);
+end
 %% 5. Obtener la respuesta impulso de un SLIT
