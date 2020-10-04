@@ -15,7 +15,7 @@ https://github.com/jclavijomartinez/SeNalesTiempoDiscrerto2030
 disp('Proyecto de aprendizaje 2')
 disp('Desarrollado por: Fabio Sánchez, Santiago Mesa y Juan Clavijo')
 %% 1. Escalamiento en el tiempo
-[escalatiempoFSJ fs1]=audioread('escalatiempoFSJ.wav');
+[escalatiempoFSJ fs1]=audioread('Audios/escalatiempoFSJ.wav');
 disp('Estas son las velocidades disponibles, elija una porfavor')
 disp('1. 0.5x')
 disp('2. 0.65x')
