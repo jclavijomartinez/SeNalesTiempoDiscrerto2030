@@ -85,9 +85,9 @@ switch userinput
     %break;
 end
 %% 2. Inversion en el tiempo
-[palindromaJ fs1]=audioread('palindromaJ.wav');
-[palindromaS fs1]=audioread('palindromaS.wav');
-[palindromaF fs1]=audioread('palindromaF.wav');
+[palindromaJ fs1]=audioread('Audios/palindromaJ.wav');
+[palindromaS fs1]=audioread('Audios/palindromaS.wav');
+[palindromaF fs1]=audioread('Audios/palindromaF.wav');
 inversionpalindromaJ=flipud(palindromaJ);
 inversionpalindromaS=flipud(palindromaS);
 inversionpalindromaF=flipud(palindromaF);
@@ -170,5 +170,5 @@ pause
 soundsc(RetardoR,fs1)
 audiowrite('posicion5.wav',RetardoR,fs1);
 %% 4. Respuesta impulso de un slit
-disp('se procede a crear el script')
+
 %% 5. Obtener la respuesta impulso de un SLIT
