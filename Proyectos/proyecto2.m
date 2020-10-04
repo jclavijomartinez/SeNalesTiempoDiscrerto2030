@@ -206,3 +206,4 @@ switch userinputp
         audiowrite('Audios/convolucion3.wav',ConvSLIT3,fs1);
 end
 %% 5. Obtener la respuesta impulso de un SLIT
+[fraseRimpulsoFSJ fs1]= audioread('Audios/RimpulsoFSJ.wav');
