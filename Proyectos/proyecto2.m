@@ -13,6 +13,7 @@ Puede encontrar este y los demás proyectos de la clase en:
 https://github.com/jclavijomartinez/SeNalesTiempoDiscrerto2030
 %}
 while 1
+    disp(' ');
     disp('Proyecto de aprendizaje 2')
     disp('Desarrollado por: Fabio Sánchez, Santiago Mesa y Juan Clavijo')
     disp('Digite "1" para ejecutar el punto numero 1');
@@ -26,6 +27,7 @@ while 1
         switch opcion
         case 1
             %% 1. Escalamiento en el tiempo
+            disp(' ');
             [escalatiempoFSJ fs1]=audioread('Audios/escalatiempoFSJ.wav');
             disp('Estas son las velocidades disponibles, elija una porfavor');
             disp('1. 0.5x');
@@ -83,7 +85,7 @@ while 1
                 case 7
                     audiowrite('1.5xescalatiempoFSJ.wav',escalatiempoFSJ,1.50*fs1);
                     disp('Presione cualquier tecla, para escuchar el audiox1.50')
-                    [UnoCincuentaEscalatiempoFSJ fs1]=audioread('1.5xescalatiempoFSJ.wav');
+                    [UnoCincuentaEscalatiempoFSJ fs1]=audioread('Audios/1.5xescalatiempoFSJ.wav');
                     pause
                     soundsc(UnoCincuentaEscalatiempoFSJ,fs1)
                     break;
@@ -97,13 +99,14 @@ while 1
             end
             case 2
                 %% 2. Inversion en el tiempo
+                disp(' ');
                 [palindromaJ fs1]=audioread('Audios/palindromaJ.wav');
                 [palindromaS fs1]=audioread('Audios/palindromaS.wav');
                 [palindromaF fs1]=audioread('Audios/palindromaF.wav');
                 inversionpalindromaJ=flipud(palindromaJ);
                 inversionpalindromaS=flipud(palindromaS);
                 inversionpalindromaF=flipud(palindromaF);
-                [escalatiempoFSJ fs1]=audioread('escalatiempoFSJ.wav');
+                [escalatiempoFSJ fs1]=audioread('Audios/escalatiempoFSJ.wav');
                 disp('Estas son las palindromas, elija una porfavor');
                 disp('1. frase antes del sistema de Juan Clavijo');
                 disp('2. frase después del sistema de Juan Clavijo');
@@ -155,8 +158,9 @@ while 1
                 end
             case 3
                 %% 3. Desplazamiento en el tiempo
-                [holaacaestoyJSF fs1]=audioread('holaacaestoyJSF.wav');
-                audioleido=holaacaestoyJSF(:,:)
+                disp(' ');
+                [holaacaestoyJSF fs1]=audioread('Audios/holaacaestoyJSF.wav');
+                audioleido=holaacaestoyJSF(:,:);
                 N=length(audioleido);
                 disp('Estas son las palindromas, elija una porfavor');
                 disp('1. escuchar la posicion 1 (izquierda total)');
@@ -215,6 +219,7 @@ while 1
                 end
             case 4
                 %% 4. Respuesta impulso de un slit
+                disp(' ');
                 [fraseslitFSJ fs1]= audioread('Audios/fraseslitFSJ.wav');
                 [impulso1 fs1]=audioread('Audios/SLITS/IMPULSO1.wav');
                 [impulso2 fs1]=audioread('Audios/SLITS/IMPULSO2.wav');
@@ -256,6 +261,7 @@ while 1
                 end
             case 5
                 %% 5. Obtener la respuesta impulso de un SLIT
+                disp(' ');
                 [fraseRimpulsoFSJ fs1]= audioread('Audios/RimpulsoFSJ.wav');
                 %[impulsoSLIT fs1] = audioread('Audios/explosion.wav');
                 ConvRimpulso=conv(fraseRimpulsoFSJ(:,1),impulsoSLIT(:,1));
