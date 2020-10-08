@@ -1,12 +1,13 @@
 %{ 
-  /$$$$$$  /$$$$$$$$ /$$$$$$$ 
- /$$__  $$|__  $$__/| $$__  $$
-| $$  \__/   | $$   | $$  \ $$
-|  $$$$$$    | $$   | $$  | $$
- \____  $$   | $$   | $$  | $$
- /$$  \ $$   | $$   | $$  | $$
-|  $$$$$$/$$ | $$/$$| $$$$$$$/
- \______/__/ |__/__/|_______/
+                 (            (      
+                 )\ )   *   ) )\ )   
+                (()/( ` )  /((()/(   
+                 /(_)) ( )(_))/(_))  
+                (_))  (_(_())(_))_   
+                / __| |_   _| |   \  
+                \__ \ _ | | _ | |) | 
+                |___/(_)|_|(_)|___/  
+
 Proyecto de aprendizaje 2 - Señales de Tiempo Discreto
 Desarrollado por: Fabio Sánchez, Santiago Mesa y Juan Clavijo
 Puede encontrar este y los demás proyectos de la clase en: 
