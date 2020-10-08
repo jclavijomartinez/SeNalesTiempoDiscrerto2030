@@ -30,7 +30,7 @@ while 1
             disp('Estas son las velocidades disponibles, elija una porfavor');
             disp('1. 0.5x');
             disp('2. 0.65x');
-            disp('3. 0.8x'):
+            disp('3. 0.8x');
             disp('4. 1x');
             disp('5. 1.20x');
             disp('6. 1.35x');
@@ -158,36 +158,61 @@ while 1
                 [holaacaestoyJSF fs1]=audioread('holaacaestoyJSF.wav');
                 audioleido=holaacaestoyJSF(:,:)
                 N=length(audioleido);
-                %posicion 1
-                RetardoL=zeros(N+30,2);
-                RetardoL(1:N,1)=audioleido(:,1);
-                RetardoL(31:N+30,2)=audioleido(:,1);
-                soundsc(RetardoL,fs1)
-                audiowrite('posicion1.wav',RetardoL,fs1);
-                %posicion 2
-                RetardoLF=zeros(N+15,2);
-                RetardoLF(1:N,1)=audioleido(:,1);
-                RetardoLF(16:N+15,2)=audioleido(:,1);
-                pause
-                soundsc(RetardoLF,fs1)
-                audiowrite('posicion2.wav',RetardoLF,fs1);
-                %posicion 3
-                pause
-                soundsc(holaacaestoyJSF,fs1)
-                %posicion 4
-                RetardoRF=zeros(N+15,2);
-                RetardoRF(1:N,2)=audioleido(:,1);
-                RetardoRF(16:N+15,1)=audioleido(:,1);
-                pause
-                soundsc(RetardoRF,fs1)
-                audiowrite('posicion4.wav',RetardoRF,fs1);
-                %posicion 5
-                RetardoR=zeros(N+30,2);
-                RetardoR(1:N,2)=audioleido(:,1);
-                RetardoR(31:N+30,1)=audioleido(:,1);
-                pause
-                soundsc(RetardoR,fs1)
-                audiowrite('posicion5.wav',RetardoR,fs1);
+                disp('Estas son las palindromas, elija una porfavor');
+                disp('1. escuchar la posicion 1 (izquierda total)');
+                disp('2. escuchar la posicion 2 (frontal izquierda)');
+                disp('3. escuchar la posicion 3 (frontal total)');
+                disp('4. escuchar la posicion 4 (frontal derecha)');
+                disp('5. escuchar la posicion 5 (derecha total)');
+                userinputptres = input('opcion: ');
+                switch userinputptres
+                    case 1
+                        %posicion 1
+                        RetardoL=zeros(N+30,2);
+                        RetardoL(1:N,1)=audioleido(:,1);
+                        RetardoL(31:N+30,2)=audioleido(:,1);
+                        disp('pulse cualquier tecla para escuchar el audio');
+                        pause
+                        soundsc(RetardoL,fs1)
+                        audiowrite('posicion1.wav',RetardoL,fs1);
+                        break;
+                    case 2
+                        %posicion 2
+                        RetardoLF=zeros(N+15,2);
+                        RetardoLF(1:N,1)=audioleido(:,1);
+                        RetardoLF(16:N+15,2)=audioleido(:,1);
+                        disp('pulse cualquier tecla para escuchar el audio');
+                        pause
+                        soundsc(RetardoLF,fs1)
+                        audiowrite('posicion2.wav',RetardoLF,fs1);
+                        break;
+                    case 3
+                        %posicion 3
+                        disp('pulse cualquier tecla para escuchar el audio');
+                        pause
+                        soundsc(holaacaestoyJSF,fs1)
+                        break;
+                    case 4
+                        %posicion 4
+                        RetardoRF=zeros(N+15,2);
+                        RetardoRF(1:N,2)=audioleido(:,1);
+                        RetardoRF(16:N+15,1)=audioleido(:,1);
+                        disp('pulse cualquier tecla para escuchar el audio');
+                        pause
+                        soundsc(RetardoRF,fs1)
+                        audiowrite('posicion4.wav',RetardoRF,fs1);
+                        break;
+                    case 5
+                        %posicion 5
+                        RetardoR=zeros(N+30,2);
+                        RetardoR(1:N,2)=audioleido(:,1);
+                        RetardoR(31:N+30,1)=audioleido(:,1);
+                        disp('pulse cualquier tecla para escuchar el audio');
+                        pause
+                        soundsc(RetardoR,fs1)
+                        audiowrite('posicion5.wav',RetardoR,fs1);
+                        break;
+                end
             case 4
                 %% 4. Respuesta impulso de un slit
                 [fraseslitFSJ fs1]= audioread('Audios/fraseslitFSJ.wav');
@@ -199,8 +224,8 @@ while 1
                 disp('2. frase después de la convolucion con el SLIT 1');
                 disp('3. frase después de la convolucion con el SLIT 2');
                 disp('4. frase después de la convolucion con el SLIT 3');
-                userinputp = input('opcion: ');
-                switch userinputp
+                userinputpcuatro = input('opcion: ');
+                switch userinputpcuatro
                     case 1
                         disp('pulse cualquier tecla para escuchar el audio:');
                         pause
