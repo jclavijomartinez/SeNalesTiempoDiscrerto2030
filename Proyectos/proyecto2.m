@@ -207,3 +207,9 @@ switch userinputp
 end
 %% 5. Obtener la respuesta impulso de un SLIT
 [fraseRimpulsoFSJ fs1]= audioread('Audios/RimpulsoFSJ.wav');
+%[impulsoSLIT fs1] = audioread('Audios/explosion.wav');
+ConvRimpulso=conv(fraseRimpulsoFSJ(:,1),impulsoSLIT(:,1));
+disp('pulse cualquier tecla para escuchar el audio:')
+pause
+soundsc(ConvRimpulso,fs1)
+audiowrite('Audios/ConvRimpulso.wav',ConvRimpulso,fs1);
