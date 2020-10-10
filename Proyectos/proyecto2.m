@@ -25,6 +25,7 @@ while 1
     disp('Digite "6" para salir del programa');
     opcion = input('¿Cual punto desea ejecutar?: ')
     switch opcion
+        % Punto 1: Escalización en el tiempo
         case 1
             while 1
                 disp(' ');
@@ -94,6 +95,7 @@ while 1
                 end
                 
             end
+        % Punto 2: Inversión en el tiempo
         case 2
             while 1
                 disp(' ');
@@ -151,6 +153,7 @@ while 1
                         break;
                 end
             end
+        % Punto 3: Desplazamiento en el tiempo
         case 3
             while 1
                 disp(' ');
@@ -211,6 +214,7 @@ while 1
                         break;
                 end
             end
+        % Punto 4: Respuesta impulso de un SLIT
         case 4
             while 1
                 disp(' ');
@@ -253,6 +257,7 @@ while 1
                         break;
                 end
             end
+        % Punto 5: Obtener la respuesta impulso de un SLIT
         case 5
             disp(' ');
             [fraseRimpulsoFSJ fs1]= audioread('Audios/Originales/RimpulsoFSJ.wav');
