@@ -244,6 +244,17 @@ while 1
                 end
             end
         % Punto 4: Respuesta impulso de un SLIT
+      %{
+        Propósito: el case en la linea X corresponde al punto 4 del
+        proyecto, en este punto el objetivo era generar la respuesta impulso a un 
+        SLIT, con los impulsos provistos por el profesor a los audios creados por los
+        desarrolladores de este proyecto, por medio de la función "conv" se realizó
+        la covolución entre el impulso y la frase que va a pasar por el SLIT y "soundsc" para
+        reproducir el audio de dicha convolución.
+        
+        Notas: Ninguna.
+       %}
+
         case 4
             while 1
                 disp(' ');
