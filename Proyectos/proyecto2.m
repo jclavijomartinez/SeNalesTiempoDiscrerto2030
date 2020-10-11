@@ -298,6 +298,17 @@ while 1
                 end
             end
         % Punto 5: Obtener la respuesta impulso de un SLIT
+        
+        %{
+        Propósito: el case en la linea X corresponde al punto 5 del
+        proyecto, en este punto el objetivo era obtener la respuesta impulso a un 
+        SLIT, por medio de un audio con un impulso creado por los desarrolladores
+        de este proyecto, el audio consiste en el sonido generado por un globo
+        al explotar. 
+        
+        Notas: las funciones utilizadas para este punto fueron las
+        mismas que las usadas en el punto 4.
+       %}
         case 5
             disp(' ');
             [fraseRimpulsoFSJ fs1]= audioread('Audios/Originales/RimpulsoFSJ.wav');
