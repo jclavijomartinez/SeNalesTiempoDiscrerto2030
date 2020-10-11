@@ -267,6 +267,7 @@ while 1
             pause
             soundsc(ConvRimpulso,fs1)
             audiowrite('Audios/Outputs/Punto5/ConvRimpulso.wav',ConvRimpulso,fs1);
+            break;
         case 6
             return;
         otherwise
