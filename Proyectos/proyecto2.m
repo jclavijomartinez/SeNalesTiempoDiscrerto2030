@@ -27,7 +27,15 @@ while 1
     switch opcion
         % Punto 1: Escalización en el tiempo
         %{
+        Propósito: el case de la línea 40 dentro del switch del menu principal corresponde al
+        punto 1 del proyecto, este punto involucraba a partir de un audio
+        con la voz de los integrantes del grupo, escalar el audio que
+        dentro de la clase se traduce en alterar por un factor la
+        frecuencia de muestreo del audio original.
         
+        Notas: para el caso 6 debido a que no funcionaba la operacion
+        1.35*fs1 recurrimos a agregar el valor correspondiente a esta
+        operacion (64800)
         %}
         case 1
             while 1
@@ -99,6 +107,14 @@ while 1
                 
             end
         % Punto 2: Inversión en el tiempo
+        %{
+        Propósito: El case en la línea 118 correspondde al punto 2 del
+        proyecto, este consistía en grabar frases palindromas 
+       (que se leen de igual modo al derecho y al revés) y a trvés del
+       codigo invertirlas en el tiempo.
+        
+        Notas: para invertir los audios se usó la función flipud.
+        %}
         case 2
             while 1
                 disp(' ');
@@ -157,6 +173,16 @@ while 1
                 end
             end
         % Punto 3: Desplazamiento en el tiempo
+        %{
+        Propósito: el case en la linea X corresponde al punto 3 del
+        proyecto, en este punto el objetivo era generar la ilusion de
+        espacialidad por medio de la propiedad de desplazamiento en el
+        tiempo, para la clase, esto involucra un espcio con ceros de igual
+        tamaño en ambas columnas L y R del audio.
+        
+        Notas: no se escribe ningun audio para la opcion 3 ya que es la
+        misma que el audio original
+        %}
         case 3
             while 1
                 disp(' ');
