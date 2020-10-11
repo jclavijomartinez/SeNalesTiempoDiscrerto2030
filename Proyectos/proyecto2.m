@@ -23,9 +23,12 @@ while 1
     disp('Digite "4" para ejecutar el punto numero 4');
     disp('Digite "5" para ejecutar el punto numero 5');
     disp('Digite "6" para salir del programa');
-    opcion = input('¿Cual punto desea ejecutar?: ')
+    opcion = input('¿Cual punto desea ejecutar?: ') 
     switch opcion
         % Punto 1: Escalización en el tiempo
+        %{
+        
+        %}
         case 1
             while 1
                 disp(' ');
