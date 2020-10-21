@@ -32,3 +32,21 @@ plot(f,abs(xf),'Color', [0.0,0.0,1.0],'LineWidth',2); % Magnitud de la FFT
 grid on
 ax = gca; ax.FontSize = 22;
 }%
+
+%leer los numeros del telefono
+%{
+[num1 fs1]=audioread('AudiosP3/1.wav');
+%fs = 8000; Frecuencia de muestreo
+Ts= 1/fs1; % Tiempo de muestreo
+N=length(num1);
+Td =N*Ts; % Tiempo de duración
+figure(1)
+subplot(2,1,1)
+t =[0:1/fs1:Td-1/fs1]; %Intervalo de tiempo
+plot(t,num1,'Color', [0.5,1.0,1.0],'LineWidth',0.1);
+grid on
+subplot(2,1,2)
+fftono=fft(num1);
+f1=[(-fs1/2): 1/Td :(fs1/2 - 1/Td)];
+stem(fftshift(f1),abs(fftono)/N,'Color', [0.0,0.0,1.0],'LineWidth',0.1); % Magnitud de la FFT
+}%
