@@ -31,7 +31,7 @@ f=[0:1/Td:fs-1/Td];
 plot(f,abs(xf),'Color', [0.0,0.0,1.0],'LineWidth',2); % Magnitud de la FFT
 grid on
 ax = gca; ax.FontSize = 22;
-}%
+%}
 
 %leer los numeros del telefono
 %{
@@ -49,4 +49,28 @@ subplot(2,1,2)
 fftono=fft(num1);
 f1=[(-fs1/2): 1/Td :(fs1/2 - 1/Td)];
 stem(fftshift(f1),abs(fftono)/N,'Color', [0.0,0.0,1.0],'LineWidth',0.1); % Magnitud de la FFT
-}%
+%}
+
+%graficar señal sinusiodal con varios parametros y grafica con subplot de freq.
+%{
+fs = 100; %Frecuencia de muestreo
+Ts= 1/fs; % Tiempo de muestreo
+Td = 0.25; % Tiempo de duración
+N=Td/Ts; % N = fs*Td
+f0 = 10; % Frecuencia señal sinusoidal en Hz
+A = 1; %Amplitud señal sinusoidal
+t =[0:1/fs:Td-1/fs]; %Intervalo de tiempo
+x = A*cos(2*pi*f0*t); % Señal sinusoida
+figure(1)
+subplot(2,1,1)
+stem(t,x,'Color', [0.5,0.1,0.1],'LineWidth',0.2);
+grid on
+ax = gca; ax.FontSize = 9;
+subplot(2,1,2)
+xf=fft(x);
+subplot(2,1,2)
+f=[0:1/Td:fs-1/Td];
+stem(f,abs(xf)/N,'Color', [0.0,0.0,1.0],'LineWidth',0.2); % Magnitud de la FFT
+grid on
+ax = gca; ax.FontSize = 9;
+%}
