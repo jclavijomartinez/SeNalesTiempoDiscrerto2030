@@ -9,7 +9,7 @@
 fs = 8000; %Frecuencia de muestreo
 Ts= 1/fs; % Tiempo de muestreo
 Td = 2; % Tiempo de duración
-N=Td/Ts; % N = fs*Td
+N=Td/Ts; %
 f0 = 1000; % Frecuencia señal sinusoidal en Hz
 A = 7; %Amplitud señal sinusoidal
 t =[0:1/fs:Td-1/fs]; %Intervalo de tiempo
@@ -55,10 +55,10 @@ stem(fftshift(f1),abs(fftono)/N,'Color', [0.0,0.0,1.0],'LineWidth',0.1); % Magni
 %{
 fs = 100; %Frecuencia de muestreo
 Ts= 1/fs; % Tiempo de muestreo
-Td = 0.25; % Tiempo de duración
+Td = 10; % Tiempo de duración
 N=Td/Ts; % N = fs*Td
-f0 = 10; % Frecuencia señal sinusoidal en Hz
-A = 1; %Amplitud señal sinusoidal
+f0 = 2; % Frecuencia señal sinusoidal en Hz
+A = 40; %Amplitud señal sinusoidal
 t =[0:1/fs:Td-1/fs]; %Intervalo de tiempo
 x = A*cos(2*pi*f0*t); % Señal sinusoida
 figure(1)
