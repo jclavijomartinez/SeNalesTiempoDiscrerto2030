@@ -1,5 +1,7 @@
 %% gráfica de la FFT
 clc;
+load('FiltroFIRP4.mat');
+load('FiltroIIRP4.mat');
 disp('Proyecto de aprendizaje 4 - Señales de Tiempo Discreto')
 disp('Desarrollado por: Santiago Mesa, Fabio Sánchez y Juan Sebastián Clavijo')
 [XIN fs1]=audioread('Party_ruido_barrido.wav');
@@ -39,7 +41,19 @@ while 1
                         soundsc(XIN,fs1)
                     case 2
                         xFIR=filter(FIRP4,XIN);
-                        disp('pulse cualquier tecla para escuchar el audio filtrado')
+                        Ts= 1/fs1;
+                        N=length(xFIR);
+                        Td =N*Ts;
+                        deltaf= 1/Td;
+                        transformada=fft(xFIR);
+                        Y=abs(transformada)/N;
+                        disp('Pulse cualquier tecla para ver la gráfica de la FFT de la señal filtrada con el FIR');
+                        pause
+                        figure
+                        f=[0:1/Td:fs1-1/Td];
+                        stem(f,Y,'Color', [0.0,1.0,1.0],'LineWidth',0.005);
+                        title('Gráfica de la FFT del audio filtrado con el FIR')
+                        disp('pulse otra tecla para escuchar el audio filtrado')
                         pause
                         soundsc(xFIR,fs1)
                     case 3
@@ -62,7 +76,19 @@ while 1
                         soundsc(XIN,fs1)
                     case 2
                         xIIR=filter(IIRP4,XIN);
-                        disp('pulse cualquier tecla para escuchar el audio filtrado')
+                        Ts= 1/fs1;
+                        N=length(xIIR);
+                        Td =N*Ts;
+                        deltaf= 1/Td;
+                        transformada=fft(xIIR);
+                        Y=abs(transformada)/N;
+                        disp('Pulse cualquier tecla para ver la gráfica de la FFT de la señal filtrada con el IIR');
+                        pause
+                        figure
+                        f=[0:1/Td:fs1-1/Td];
+                        stem(f,Y,'Color', [0.0,1.0,1.0],'LineWidth',0.005);
+                        title('Gráfica de la FFT del audio filtrado con el IIR')
+                        disp('pulse otra tecla para escuchar el audio filtrado')
                         pause
                         soundsc(xIIR,fs1)
                     case 3
