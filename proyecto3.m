@@ -23,8 +23,7 @@ plot(t,x,'Color', [0.5,1.0,1.0],'LineWidth',3);
 grid on
 ax = gca; ax.FontSize = 12;
 subplot(2,1,2)
-f=
-plot(abs(f,fft(x)))
+
 
 %help
 %{ 

@@ -35,7 +35,7 @@ ax = gca; ax.FontSize = 22;
 
 %leer los numeros del telefono
 %{
-[num1 fs1]=audioread('AudiosP3/1.wav');
+[num1 fs1]=audioread('Senal20201028I(1).wav');
 %fs = 8000; Frecuencia de muestreo
 Ts= 1/fs1; % Tiempo de muestreo
 N=length(num1);
